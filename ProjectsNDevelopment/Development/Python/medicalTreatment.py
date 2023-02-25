@@ -1,0 +1,145 @@
+"""
+
+First, take a look at the two lists in script.py.
+
+The list names stores the names of ten individuals, and insurance_costs stores their medical insurance costs.
+
+Let’s add additional data to these lists:
+
+Append a new individual, "Priscilla", to names.
+Append her insurance cost, 8320.0, to insurance_costs.
+
+Stuck? Get a hint
+2.
+Currently, the names and insurance_costs lists are separate, but we want each insurance cost to be paired with a name.
+
+Create a new variable called medical_records that combines insurance_costs and names into a list using the zip() function.
+
+The list should have the following structure:
+
+[(cost_0, name_0), (cost_1, name_1), (cost_2, name_2), ...]
+
+Stuck? Get a hint
+3.
+Print out medical_records in the terminal, and make sure the output is what you expected.
+
+
+Stuck? Get a hint
+4.
+Let’s explore our medical data.
+
+We want to see how many medical records we’re dealing with. Create a variable called num_medical_records that stores the length of medical_records.
+
+
+Stuck? Get a hint
+5.
+Print num_medical_records with the following message:
+
+There are {number of medical records} medical records. 
+
+Stuck? Get a hint
+Selecting List Elements
+6.
+Select the first medical record in medical_records, and save it to a variable called first_medical_record.
+
+
+Stuck? Get a hint
+7.
+Print first_medical_record with the following message:
+
+Here is the first medical record: {first medical record}
+
+Stuck? Get a hint
+Sorting Lists
+8.
+Sort medical_records so that the individuals with the lowest insurance costs appear at the start of the list.
+
+Print the sorted medical_records with the following message:
+
+Here are the medical records sorted by insurance cost: {sorted list}
+
+Stuck? Get a hint
+Slicing Lists
+9.
+Let’s look at the three cheapest insurance costs in our medical records.
+
+Slice the medical_records list, and store the three cheapest insurance costs in a list called cheapest_three.
+
+
+Stuck? Get a hint
+10.
+Print cheapest_three with the following message:
+
+Here are the three cheapest insurance costs in our medical records: {cheapest three}
+
+Stuck? Get a hint
+11.
+Let’s look at the three most expensive insurance costs in our medical records.
+
+Slice the medical_records list, and store the three most expensive insurance costs in a list called priciest_three.
+
+
+Stuck? Get a hint
+12.
+Print priciest_three with the following message:
+
+Here are the three most expensive insurance costs in our medical records: {priciest three}
+
+Stuck? Get a hint
+Counting Elements in a List
+13.
+Some individuals in our medical records have the same name. For example, the name “Paul” shows up twice.
+
+Count the number of occurrences of “Paul” in the names list, and store the result in a variable called occurrences_paul.
+
+Print occurrences_paul with the following message:
+
+There are {occurrences Paul} individuals with the name Paul in our medical records. 
+
+Stuck? Get a hint
+Extra
+14.
+Great job! In this project, you worked with Python lists to store medical insurance cost data and then gained meaningful insight into that data.
+
+You now have a better understanding of how to interact with data in lists – an important skill for a data scientist to have.
+
+Our dataset in this project was pretty small – we only dealt with 11 medical records. However, as you progress in your data science journey, you will encounter larger and more complex datasets. You are now better prepared to work with data in lists moving forward.
+
+If you’d like additional practice on lists, here are some ways you might extend this project:
+
+Sort the medical records alphabetically by name. You’ll have to create a new list using zip() to do this.
+Select the medical records starting at index 3 and ending at index 7 and save it in a variable called middle_five_records.
+Happy coding!
+
+"""
+
+names = ["Mohamed", "Sara", "Xia", "Paul", "Valentina", "Jide", "Aaron", "Emily", "Nikita", "Paul"]
+insurance_costs = [13262.0, 4816.0, 6839.0, 5054.0, 14724.0, 5360.0, 7640.0, 6072.0, 2750.0, 12064.0]
+
+# Add your code here
+names.append("Priscila")
+insurance_costs.append(8320.0)
+medical_records= list(zip(names,insurance_costs))
+
+print(medical_records)
+num_medical_records=len(medical_records)
+print("There are " +str(num_medical_records)+" medical records.")
+first_medical_record=medical_records[0]
+print("Here is the first medical record: "+str(first_medical_record))
+def takesecond(lst):
+  return lst[1]
+medical_records_sorted=sorted(medical_records, key=takesecond)
+print("Here are the medical records sorted by insurance costs: " +str(medical_records_sorted))
+cheapest_three = medical_records_sorted[:3]
+print("Here are the three cheapes insurance costs in our medical records: "+str(cheapest_three))
+pricest_three = medical_records_sorted[-3:]
+print("Here are the three cheapes insurance costs in our medical records: "+str(pricest_three))
+ocurrences_paul = names.count("Paul")
+print("There are " +str(ocurrences_paul)+" individuals with the name Paul in our medical recores.")
+def takefirst(lst):
+  return lst[0]
+medical_records_sorted_by_name = sorted(medical_records, key=takefirst)
+print(medical_records_sorted_by_name)
+middle_five_records=medical_records_sorted_by_name[3:8]
+print(middle_five_records)
+
