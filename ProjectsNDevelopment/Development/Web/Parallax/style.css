@@ -1,0 +1,63 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Open Sans', sans-serif;
+  }
+  
+  .container {
+    width: 100%;
+  }
+  
+  .hero {
+    height: 100vh;
+    background-image: url('https://images.unsplash.com/photo-1506259177263-ec16e33c9d1e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .hero h1 {
+    color: #fff;
+    font-size: 4rem;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  }
+  
+  .parallax {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+  }
+  
+  .parallax-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    transform: translateZ(0) scale(1.1);
+  }
+  
+  .parallax-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    color: #fff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    width: 60%;
+  }
+  
+  .parallax:nth-child(odd) .parallax-bg {
+    background-image: url('https://images.unsplash.com/photo-1487180144657-9f8336841d7e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+  }
+  
+  .parallax:nth-child(even) .parallax-bg {
+    background-image: url('https://images.unsplash.com/photo-1500682499618-0f80b0aef6e4?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+  }
+  
