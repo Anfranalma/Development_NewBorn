@@ -1,0 +1,228 @@
+mysql 14:00:38 [NY2 PROD 921a] [(none)] [3108]> show all slaves status\G
+*************************** 1. row ***************************
+              Connection_name: clients
+              Slave_SQL_State:
+               Slave_IO_State:
+                  Master_Host: ny2-ldb-600a
+                  Master_User: rep_user
+                  Master_Port: 3103
+                Connect_Retry: 60
+              Master_Log_File: mysql-bin.009017
+          Read_Master_Log_Pos: 7050926
+               Relay_Log_File: zone2analytics_3108-relay-bin-clients.001582
+                Relay_Log_Pos: 7051218
+        Relay_Master_Log_File: mysql-bin.009017
+             Slave_IO_Running: No
+            Slave_SQL_Running: No
+              Replicate_Do_DB: amoeba,amoeba_audit,tsadmin
+          Replicate_Ignore_DB: dba_no_repl,tempdb,dba_repl
+           Replicate_Do_Table:
+       Replicate_Ignore_Table:
+      Replicate_Wild_Do_Table:
+  Replicate_Wild_Ignore_Table: tempdb.%,dba_no_repl.%
+                   Last_Errno: 0
+                   Last_Error:
+                 Skip_Counter: 0
+          Exec_Master_Log_Pos: 7050926
+              Relay_Log_Space: 7051589
+              Until_Condition: None
+               Until_Log_File:
+                Until_Log_Pos: 0
+           Master_SSL_Allowed: No
+           Master_SSL_CA_File:
+           Master_SSL_CA_Path:
+              Master_SSL_Cert:
+            Master_SSL_Cipher:
+               Master_SSL_Key:
+        Seconds_Behind_Master: NULL
+Master_SSL_Verify_Server_Cert: No
+                Last_IO_Errno: 0
+                Last_IO_Error:
+               Last_SQL_Errno: 0
+               Last_SQL_Error:
+  Replicate_Ignore_Server_Ids:
+             Master_Server_Id: 133103
+               Master_SSL_Crl:
+           Master_SSL_Crlpath:
+                   Using_Gtid: No
+                  Gtid_IO_Pos:
+      Replicate_Do_Domain_Ids:
+  Replicate_Ignore_Domain_Ids:
+                Parallel_Mode: conservative
+         Retried_transactions: 0
+           Max_relay_log_size: 209715200
+         Executed_log_entries: 417525193
+    Slave_received_heartbeats: 0
+       Slave_heartbeat_period: 1800.000
+               Gtid_Slave_Pos: 3101-192013101-191949,3102-233102-233599798,3103-133103-1268072295,3104-133104-882317643,3105-133105-694169976,3108-192113108-7974753944,3111-121013111-2915801,3118-123118-5207616
+*************************** 2. row ***************************
+              Connection_name: ezim
+              Slave_SQL_State:
+               Slave_IO_State:
+                  Master_Host: ny2-ldb-800a
+                  Master_User: rep_user
+                  Master_Port: 3118
+                Connect_Retry: 60
+              Master_Log_File: mysql-bin.002839
+          Read_Master_Log_Pos: 200758985
+               Relay_Log_File: zone2analytics_3108-relay-bin-ezim.001220
+                Relay_Log_Pos: 200759277
+        Relay_Master_Log_File: mysql-bin.002839
+             Slave_IO_Running: No
+            Slave_SQL_Running: No
+              Replicate_Do_DB: ezim
+          Replicate_Ignore_DB: dba_no_repl,tempdb,dba_repl
+           Replicate_Do_Table:
+       Replicate_Ignore_Table:
+      Replicate_Wild_Do_Table:
+  Replicate_Wild_Ignore_Table: tempdb.%,dba_no_repl.%
+                   Last_Errno: 0
+                   Last_Error:
+                 Skip_Counter: 0
+          Exec_Master_Log_Pos: 200758985
+              Relay_Log_Space: 200759373
+              Until_Condition: None
+               Until_Log_File:
+                Until_Log_Pos: 0
+           Master_SSL_Allowed: No
+           Master_SSL_CA_File:
+           Master_SSL_CA_Path:
+              Master_SSL_Cert:
+            Master_SSL_Cipher:
+               Master_SSL_Key:
+        Seconds_Behind_Master: NULL
+Master_SSL_Verify_Server_Cert: No
+                Last_IO_Errno: 0
+                Last_IO_Error:
+               Last_SQL_Errno: 0
+               Last_SQL_Error:
+  Replicate_Ignore_Server_Ids:
+             Master_Server_Id: 123118
+               Master_SSL_Crl:
+           Master_SSL_Crlpath:
+                   Using_Gtid: No
+                  Gtid_IO_Pos:
+      Replicate_Do_Domain_Ids:
+  Replicate_Ignore_Domain_Ids:
+                Parallel_Mode: conservative
+         Retried_transactions: 0
+           Max_relay_log_size: 209715200
+         Executed_log_entries: 351487377
+    Slave_received_heartbeats: 0
+       Slave_heartbeat_period: 1800.000
+               Gtid_Slave_Pos: 3101-192013101-191949,3102-233102-233599798,3103-133103-1268072295,3104-133104-882317643,3105-133105-694169976,3108-192113108-7974753944,3111-121013111-2915801,3118-123118-5207616
+*************************** 3. row ***************************
+              Connection_name: products
+              Slave_SQL_State:
+               Slave_IO_State:
+                  Master_Host: ny2-ldb-500a
+                  Master_User: rep_user
+                  Master_Port: 3104
+                Connect_Retry: 60
+              Master_Log_File: mysql-bin.008490
+          Read_Master_Log_Pos: 24451040
+               Relay_Log_File: zone2analytics_3108-relay-bin-products.001069
+                Relay_Log_Pos: 24451332
+        Relay_Master_Log_File: mysql-bin.008490
+             Slave_IO_Running: No
+            Slave_SQL_Running: No
+              Replicate_Do_DB: eod_price,instrumentmaster,deals
+          Replicate_Ignore_DB: tempdb,dba_repl
+           Replicate_Do_Table:
+       Replicate_Ignore_Table:
+      Replicate_Wild_Do_Table:
+  Replicate_Wild_Ignore_Table: instrumentmaster.staging%,tempdb.%,dba_no_repl.%
+                   Last_Errno: 0
+                   Last_Error:
+                 Skip_Counter: 0
+          Exec_Master_Log_Pos: 24451040
+              Relay_Log_Space: 24451704
+              Until_Condition: None
+               Until_Log_File:
+                Until_Log_Pos: 0
+           Master_SSL_Allowed: No
+           Master_SSL_CA_File:
+           Master_SSL_CA_Path:
+              Master_SSL_Cert:
+            Master_SSL_Cipher:
+               Master_SSL_Key:
+        Seconds_Behind_Master: NULL
+Master_SSL_Verify_Server_Cert: No
+                Last_IO_Errno: 0
+                Last_IO_Error:
+               Last_SQL_Errno: 0
+               Last_SQL_Error:
+  Replicate_Ignore_Server_Ids:
+             Master_Server_Id: 133104
+               Master_SSL_Crl:
+           Master_SSL_Crlpath:
+                   Using_Gtid: No
+                  Gtid_IO_Pos:
+      Replicate_Do_Domain_Ids:
+  Replicate_Ignore_Domain_Ids:
+                Parallel_Mode: conservative
+         Retried_transactions: 0
+           Max_relay_log_size: 209715200
+         Executed_log_entries: 236189199
+    Slave_received_heartbeats: 0
+       Slave_heartbeat_period: 1800.000
+               Gtid_Slave_Pos: 3101-192013101-191949,3102-233102-233599798,3103-133103-1268072295,3104-133104-882317643,3105-133105-694169976,3108-192113108-7974753944,3111-121013111-2915801,3118-123118-5207616
+*************************** 4. row ***************************
+              Connection_name: trades
+              Slave_SQL_State:
+               Slave_IO_State:
+                  Master_Host: ny2-ldb-920a
+                  Master_User: rep_user
+                  Master_Port: 3101
+                Connect_Retry: 60
+              Master_Log_File: mysql-bin.000006
+          Read_Master_Log_Pos: 86330796
+               Relay_Log_File: zone2analytics_3108-relay-bin-trades.000007
+                Relay_Log_Pos: 18576206
+        Relay_Master_Log_File: mysql-bin.000006
+             Slave_IO_Running: No
+            Slave_SQL_Running: No
+              Replicate_Do_DB: abc,positions,positions_archive,tsom
+          Replicate_Ignore_DB: tempdb,dba_repl,archive_no_repl
+           Replicate_Do_Table:
+       Replicate_Ignore_Table:
+      Replicate_Wild_Do_Table:
+  Replicate_Wild_Ignore_Table: tempdb.%,dba_no_repl.%,dba_repl.pt_checksums
+                   Last_Errno: 0
+                   Last_Error:
+                 Skip_Counter: 0
+          Exec_Master_Log_Pos: 86330796
+              Relay_Log_Space: 25893620
+              Until_Condition: None
+               Until_Log_File:
+                Until_Log_Pos: 0
+           Master_SSL_Allowed: No
+           Master_SSL_CA_File:
+           Master_SSL_CA_Path:
+              Master_SSL_Cert:
+            Master_SSL_Cipher:
+               Master_SSL_Key:
+        Seconds_Behind_Master: NULL
+Master_SSL_Verify_Server_Cert: No
+                Last_IO_Errno: 0
+                Last_IO_Error:
+               Last_SQL_Errno: 0
+               Last_SQL_Error:
+  Replicate_Ignore_Server_Ids:
+             Master_Server_Id: 192013101
+               Master_SSL_Crl:
+           Master_SSL_Crlpath:
+                   Using_Gtid: No
+                  Gtid_IO_Pos:
+      Replicate_Do_Domain_Ids:
+  Replicate_Ignore_Domain_Ids:
+                Parallel_Mode: conservative
+         Retried_transactions: 0
+           Max_relay_log_size: 209715200
+         Executed_log_entries: 414595
+    Slave_received_heartbeats: 0
+       Slave_heartbeat_period: 1800.000
+               Gtid_Slave_Pos: 3101-192013101-191949,3102-233102-233599798,3103-133103-1268072295,3104-133104-882317643,3105-133105-694169976,3108-192113108-7974753944,3111-121013111-2915801,3118-123118-5207616
+4 rows in set (0.00 sec)
+
+mysql 14:02:01 [NY2 PROD 921a] [(none)] [3108]>

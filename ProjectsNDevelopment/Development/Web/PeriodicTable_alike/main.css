@@ -1,0 +1,19 @@
+table, th, td {
+    border: 1px solid black;
+}
+
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1 {
+    color: red;
+}
+
+thead th {
+    color: green;
+}
+
+tbody th {
+    color:blue;
+}
