@@ -20,9 +20,46 @@ namespace WMNewBorn
     /// </summary>
     public partial class MainWindow : Window
     {
+        bool Playstate = false;
+        bool Stopstate = false;
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void StartBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Me.Play();
+            Playstate = true;
+            Stopstate = false;
+        }
+
+        private void StopBtn_Click(object sender, RoutedEventArgs e)
+        {
+            Me.Stop();
+            Playstate = false;
+            Stopstate = true;
+        }
+
+        private void PauseBtn_Click(object sender, RoutedEventArgs e)
+        {
+
+            
+            if (Playstate == false)
+            {
+                Me.Play();
+                Playstate = true;
+            }
+            else
+            {
+                Me.Pause();
+                Playstate = false;
+            }
+        }
+
+        private void VolumeSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            Me.Volume = VolumeSlider.Value;
         }
     }
 }
